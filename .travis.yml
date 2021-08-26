@@ -6,8 +6,8 @@ script:
     - docker build -t msleila/node .
     - docker images msleila/node
 
-#before_deploy:
- # - docker login -u <username>  -p <userpassword>
+before_deploy:
+  - docker login -u 31070103  -p Ayoub?10
 
 deploy:
   provider: script
