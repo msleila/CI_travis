@@ -1,7 +1,16 @@
 sudo: required
 services:
-  - docker
+    - docker
 
 script:
-  - docker build -t msleila/node .
-  - docker images msleila/node
+    - docker build -t msleila/node .
+    - docker images msleila/node
+
+#before_deploy:
+ # - docker login -u <username>  -p <userpassword>
+
+deploy:
+  provider: script
+  script: docker push 31070103/node
+  on:
+    branch: master
