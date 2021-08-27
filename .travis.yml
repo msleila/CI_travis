@@ -11,6 +11,6 @@ before_deploy:
 
 deploy:
   provider: script
-  script: docker push <dockeruser/nameofproject>
+  script: docker push 31070103/node2
   on:
     branch: master
