@@ -3,14 +3,14 @@ services:
     - docker
 
 script:
-    - docker build -t 31070103/node .
-    - docker images 31070103/node
+    - docker build -t 31070103/node2 .
+    - docker images 31070103/node2
 
 before_deploy:
-  - docker login -u $"DOCKER_USERNAME"  -p $"DOCKER_PASSWORD"
+  - docker login -u $DOCKER_USERNAME  -p $DOCKER_PASSWORD
 
 deploy:
   provider: script
-  script: docker push 31070103/node
+  script: docker push <dockeruser/nameofproject>
   on:
-    branch: main
+    branch: master
