@@ -3,11 +3,11 @@ services:
     - docker
 
 script:
-    - docker build -t msleila/node .
-    - docker images msleila/node
+    - docker build -t 31070103/node .
+    - docker images 31070103/node
 
 before_deploy:
-  - docker login -u 31070103  -p Ayoub?10
+  - docker login -u DOCKER_USERNAME  -p DOCKER_PASSWORD
 
 deploy:
   provider: script
