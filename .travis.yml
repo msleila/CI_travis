@@ -13,4 +13,4 @@ deploy:
   provider: script
   script: docker push 31070103/node2
   on:
-    branch: main
+    branch: master
