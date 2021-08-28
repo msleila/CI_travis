@@ -15,4 +15,4 @@ deploy:
     - docker tag msleila/node2 31070103/node2
     - docker push 31070103/node2
   on:
-    branch: master
+    branch: main
