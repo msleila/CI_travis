@@ -3,8 +3,8 @@ services:
     - docker
 
 script:
-    - docker build -t msleila/node2 .
-    - docker images msleila/node2
+    - docker build -t 31070103/node2 .
+    - docker images 31070103/node2
 
 before_deploy:
   - docker login -u $DOCKER_USERNAME  -p $DOCKER_PASSWORD
@@ -12,7 +12,7 @@ before_deploy:
 deploy:
   provider: script
   script: 
-    - docker tag msleila/node2 31070103/node2
+    - docker tag 31070103/node2 31070103/node2
     - docker push 31070103/node2
   on:
     branch: main
