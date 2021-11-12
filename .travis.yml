@@ -3,8 +3,8 @@ services:
     - docker
 
 script:
-    - docker build -t 31070103/node2 .
-    - docker images 31070103/node2
+    - docker build -t 31070103/node3 .
+    - docker images 31070103/node3
 
 before_deploy:
   - docker login -u $DOCKER_USERNAME  -p $DOCKER_PASSWORD
