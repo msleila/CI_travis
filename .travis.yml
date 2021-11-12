@@ -7,7 +7,7 @@ script:
     - docker images 31070103/node3
 
 before_deploy:
-  - docker login -u '$DOCKER_USERNAME'  -p '$DOCKER_PASSWORD'
+  - docker login -u $DOCKER_USERNAME  -p $DOCKER_PASSWORD
 
 deploy:
   provider: script
